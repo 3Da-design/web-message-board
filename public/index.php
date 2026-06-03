@@ -39,6 +39,19 @@ function convertTz($datetime_text) {
     <div class="page-cover">
       <p class="page-title">ひとこと掲示板</p>
 
+      <hr class="page-divider"/>
+
+      <?php if ($messages['action_success_text'] !== '') { ?>
+        <div class="action-success-area">
+          <?php echo $messages['action_success_text']; ?>
+        </div>
+      <?php } ?>
+      <?php if ($messages['action_error_text'] !== '') { ?>
+        <div class="action-failed-area">
+          <?php echo $messages['action_error_text']; ?>
+        </div>
+      <?php } ?>
+
       <div class="form-cover">
         <form action="/" method="post">
           <!-- 投稿者ニックネームの入力フォーム -->
@@ -61,12 +74,7 @@ function convertTz($datetime_text) {
             投稿内容
             <small>(必須)</small>
           </div>
-          <textarea
-            name="message"
-            class="input-message"
-          >
-            <?php echo htmlspecialchars($messages['input_pre_message'], ENT_QUOTES); ?>
-          </textarea>
+          <textarea name="message" class="input-message"><?php echo htmlspecialchars($messages['input_pre_message'], ENT_QUOTES); ?></textarea>
           <?php if ($messages['input_error_message'] !== '') { ?>
             <div class="form-input-error">
               <?= $messages['input_error_message']; ?>

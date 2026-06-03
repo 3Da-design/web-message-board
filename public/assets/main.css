@@ -71,12 +71,12 @@ p {
 /* ===== PAGE PARTS END ===== */
 
 /* ===== NOTIFICATION AREA BEGIN ===== */
-.action-successs-area {
+.action-success-area {
   width: max-content;
   margin: 10px auto;
   padding: 5px 15px;
   color: #388e3c;
-  border: solid 2px "388e3c";
+  border: solid 2px #388e3c;
   border-radius: 4px;
 }
 
@@ -85,7 +85,7 @@ p {
   margin: 10px auto;
   padding: 5px 15px;
   color: #bb1850;
-  border: solid 2px "#bb1850";
+  border: solid 2px #bb1850;
   border-radius: 4px;
 }
 /* ===== NOTIFICATION AREA END ===== */
